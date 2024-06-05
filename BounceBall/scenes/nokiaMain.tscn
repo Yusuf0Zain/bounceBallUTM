@@ -28,11 +28,11 @@ texture = ExtResource("3_61exf")
 offset = Vector2(-104.001, 224.859)
 
 [node name="setting" type="Button" parent="menu"]
-offset_left = -203.329
+offset_left = -133.571
 offset_top = 53.5077
-offset_right = 316.671
+offset_right = 386.429
 offset_bottom = 573.508
-scale = Vector2(0.103507, 0.100237)
+scale = Vector2(0.103507, 0.103025)
 action_mode = 0
 icon = ExtResource("4_vw7ii")
 
@@ -47,9 +47,9 @@ action_mode = 0
 icon = ExtResource("5_u3aml")
 
 [node name="power" type="Button" parent="menu"]
-offset_left = -203.329
+offset_left = -63.8129
 offset_top = 53.5077
-offset_right = 316.671
+offset_right = 456.187
 offset_bottom = 573.508
 scale = Vector2(0.103527, 0.103527)
 action_mode = 0
