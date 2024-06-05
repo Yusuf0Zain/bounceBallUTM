@@ -1,0 +1,5 @@
+res://scenes/GameMenu.tscn
+res://scenes/intro.tscn
+res://scenes/Level2.tscn
+res://scripts/GameMan.gd
+res://scenes/ball.tscn

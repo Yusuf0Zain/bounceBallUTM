@@ -1,0 +1,44 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1717603007
+icon.svg::CompressedTexture2D::4524375916785993000::1717602792::1717602857::1::::<><>::
+::res://assets/::1717603006
+joystix monospace.otf::FontFile::2281555201708855127::1717602792::1717602856::1::::<><>::
+Retro Gaming.ttf::FontFile::6910310668793306805::1717602792::1717603007::1::::<><>::
+Super Normal.ttf::FontFile::7600586897051989350::1717602792::1717602856::1::::<><>::
+::res://assets/nokia/::1717602857
+0001.png::CompressedTexture2D::472971544729015503::1717602792::1717602857::1::::<><>::
+58481908cef1014c0b5e49b2 (1).png::CompressedTexture2D::3369497255341929415::1717602792::1717602857::1::::<><>::
+c03028b12f6cd0b9553b7df8a92420db.jpg::CompressedTexture2D::3881013574730361219::1717602792::1717602857::1::::<><>::
+pngwing.com (1) (1).png::CompressedTexture2D::5481256562286609321::1717602792::1717602857::1::::<><>::
+setting.png::CompressedTexture2D::5555130271960829912::1717602792::1717602857::1::::<><>::
+::res://assets/sprites/::1717603006
+background.png::CompressedTexture2D::4003328899318803873::1717602792::1717602857::1::::<><>::
+ball.png::CompressedTexture2D::1891270184512713330::1717602792::1717602857::1::::<><>::
+bounce.png::CompressedTexture2D::5553144915447792::1717602792::1717602857::1::::<><>::
+cutscene2.png::CompressedTexture2D::2562170582218187679::1717602792::1717602857::1::::<><>::
+cutscene.png::CompressedTexture2D::913275271494541343::1717602792::1717602857::1::::<><>::
+grassMap.png::CompressedTexture2D::8328361919000246535::1717602792::1717602857::1::::<><>::
+key.png::CompressedTexture2D::8314658932646804628::1717602792::1717602857::1::::<><>::
+lgoo.png::CompressedTexture2D::7423648250384476273::1717602995::1717602999::1::::<><>::
+lock.png::CompressedTexture2D::3164212403943616268::1717602792::1717602857::1::::<><>::
+spikes.png::CompressedTexture2D::1781762768857146242::1717602792::1717602856::1::::<><>::
+spikeSpin.png::CompressedTexture2D::1830314636427304713::1717602792::1717602856::1::::<><>::
+tree.png::CompressedTexture2D::8587015673409063358::1717602792::1717602856::1::::<><>::
+::res://scenes/::1717603006
+ball.tscn::PackedScene::7157614863047389575::1717602792::0::1::::<><>::uid://17e7c3ctlp8m::::res://assets/sprites/ball.png
+GameMenu.tscn::PackedScene::2043601388585710393::1717602940::0::1::::<><>::res://scripts/GameMan.gd<>uid://dgj1s5ouoodte::::res://assets/Super Normal.ttf
+intro.tscn::PackedScene::4160034321885117568::1717603006::0::1::::<><>::res://scripts/intro.gd<>uid://c5pn2paq2n0m8::::res://assets/Retro Gaming.ttf
+Level2.tscn::PackedScene::6086654676923176207::1717602940::0::1::::<><>::
+main.tscn::PackedScene::2386769665778731577::1717602792::0::1::::<><>::uid://dw1l0pmo0cbdi::::res://tile_map.tscn<>uid://bmcunowk0s8dj::::res://ball.tscn<>uid://ddnfaeywj7y3u::::res://bounce.tscn<>uid://cyr1qrbr36hxm::::res://key.tscn<>uid://cr3lxokjthq7j::::res://lock.png<>uid://v4ftt4pblp1i::::res://enemy.tscn<>uid://1iwefq1oovul::::res://coin.tscn<>uid://xnev0dlnhg7m::::res://killzone.tscn
+nokiaMain.tscn::PackedScene::1526045765421255034::1717602792::0::1::::<><>::res://scripts/menu.gd<>res://video/Timeline 2.ogv<>uid://boahelnqs18id::::res://assets/nokia/58481908cef1014c0b5e49b2 (1).png<>uid://bvj8yx5oo1qn0::::res://assets/nokia/c03028b12f6cd0b9553b7df8a92420db.jpg<>uid://cle7giwsnjmj5::::res://assets/nokia/setting.png<>uid://g0d1iydxi6u2::::res://assets/nokia/0001.png<>uid://ckdfq27aurc38::::res://assets/nokia/pngwing.com (1) (1).png
+::res://scripts/::1717602871
+ball.gd::GDScript::-1::1717602792::0::1::::<>CharacterBody2D<>::
+buttons.gd::GDScript::-1::1717602792::0::1::::<>Button<>::
+coin.gd::GDScript::-1::1717602792::0::1::::<>Area2D<>::
+GameMan.gd::GDScript::-1::1717602792::0::1::::<>Node2D<>::
+intro.gd::GDScript::-1::1717602792::0::1::::<>Node2D<>::
+key.gd::GDScript::-1::1717602792::0::1::::<>Area2D<>::
+killzone.gd::GDScript::-1::1717602792::0::1::::<>Area2D<>::
+menu.gd::GDScript::-1::1717602792::0::1::::<>Node2D<>::
+::res://video/::1717602998
+Timeline 2.ogv::VideoStreamTheora::-1::1717586077::0::1::::<><>::
