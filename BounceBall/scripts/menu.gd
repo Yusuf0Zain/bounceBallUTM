@@ -11,7 +11,7 @@ func _on_setting_pressed():
 
 
 func _on_game_pressed():
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameMenu.tscn")
 
 
 func _on_power_pressed():

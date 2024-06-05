@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://4d620vx40bwr"]
+
+[ext_resource type="Texture2D" uid="uid://c4e5vo34n1a2o" path="res://assets/sprites/lgoo.png" id="1_phcn4"]
+[ext_resource type="Script" path="res://scenes/GameMan.gd" id="1_x316e"]
+[ext_resource type="FontFile" uid="uid://dgj1s5ouoodte" path="res://assets/Super Normal.ttf" id="2_gmeqq"]
+
+[node name="GameMenu" type="Node2D"]
+script = ExtResource("1_x316e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.525, 0.525)
+
+[node name="Lgoo" type="Sprite2D" parent="."]
+position = Vector2(0, -319)
+scale = Vector2(0.865, 0.865)
+texture = ExtResource("1_phcn4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lgoo"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -755.5
+offset_top = 115.286
+offset_right = -324.5
+offset_bottom = 502.286
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5563, 1.5563)
+pivot_offset = Vector2(215.451, 0.0656185)
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="play" type="Button" parent="Lgoo/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.466667, 0.0627451, 0.0627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 200
+action_mode = 0
+text = "PLAY"
+flat = true
+
+[node name="levels" type="Button" parent="Lgoo/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.360774, 0, 0.140881, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+text = "levels"
+flat = true
+
+[node name="back" type="Button" parent="Lgoo/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+text = "RETURN"
+flat = true
+
+[connection signal="pressed" from="Lgoo/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Lgoo/VBoxContainer/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Lgoo/VBoxContainer/back" to="." method="_on_back_pressed"]
