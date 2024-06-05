@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://4d620vx40bwr"]
 
-[ext_resource type="Texture2D" uid="uid://c4e5vo34n1a2o" path="res://assets/sprites/lgoo.png" id="1_phcn4"]
-[ext_resource type="Script" path="res://scenes/GameMan.gd" id="1_x316e"]
+[ext_resource type="Script" path="res://scripts/GameMan.gd" id="1_x316e"]
 [ext_resource type="FontFile" uid="uid://dgj1s5ouoodte" path="res://assets/Super Normal.ttf" id="2_gmeqq"]
+[ext_resource type="Texture2D" uid="uid://dd1cnw2fvokx2" path="res://assets/sprites/lgoo.png" id="2_vxxqr"]
 
 [node name="GameMenu" type="Node2D"]
 script = ExtResource("1_x316e")
@@ -13,7 +13,7 @@ zoom = Vector2(0.525, 0.525)
 [node name="Lgoo" type="Sprite2D" parent="."]
 position = Vector2(0, -319)
 scale = Vector2(0.865, 0.865)
-texture = ExtResource("1_phcn4")
+texture = ExtResource("2_vxxqr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Lgoo"]
 anchors_preset = 8
@@ -21,9 +21,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -755.5
+offset_left = -756.185
 offset_top = 115.286
-offset_right = -324.5
+offset_right = -325.185
 offset_bottom = 502.286
 grow_horizontal = 2
 grow_vertical = 2

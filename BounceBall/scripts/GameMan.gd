@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/Level2.tscn")
 
 
 func _on_levels_pressed():
