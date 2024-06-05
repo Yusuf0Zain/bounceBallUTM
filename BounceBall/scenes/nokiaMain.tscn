@@ -34,6 +34,10 @@ texture = ExtResource("2_cq0kf")
 [node name="Time" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Time"]
-offset_right = 45.0
-offset_bottom = 23.0
+offset_left = 126.0
+offset_top = -198.0
+offset_right = 171.0
+offset_bottom = -175.0
+scale = Vector2(3.04, 3.04)
+text = "%02d:%02d:%02d"
 script = ExtResource("4_w84yc")
