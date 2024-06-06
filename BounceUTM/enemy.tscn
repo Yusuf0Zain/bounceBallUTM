@@ -68,6 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfq2n"]
+radius = 13.8176
 
 [node name="enemy" type="Node2D"]
 position = Vector2(5, 38)
@@ -83,5 +84,5 @@ frame_progress = 0.326995
 [node name="killzone" parent="." instance=ExtResource("2_arpxe")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(94.7497, -17)
+position = Vector2(96.7233, -17)
 shape = SubResource("CircleShape2D_pfq2n")
