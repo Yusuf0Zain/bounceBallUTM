@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://ceuc5voo2nnei"]
+
+[ext_resource type="Texture2D" uid="uid://1cvaq613yw6t" path="res://assets/sprites/spikeSpin.png" id="1_stqdo"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="2_qhi3a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k288"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sejcx"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3x3u"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_471xl"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mftt4"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67pdi"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg4g4"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnu0l"]
+atlas = ExtResource("1_stqdo")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lubi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k288")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sejcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3x3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_471xl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mftt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67pdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg4g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnu0l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63p1j"]
+
+[node name="enemy" type="AnimatedSprite2D"]
+position = Vector2(5624, 352)
+sprite_frames = SubResource("SpriteFrames_8lubi")
+autoplay = "default"
+frame_progress = 0.864081
+script = ExtResource("2_qhi3a")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(3.65403, 2.32324)
+shape = SubResource("RectangleShape2D_63p1j")
+
+[node name="RayCastR" type="RayCast2D" parent="."]
+position = Vector2(0, 22)
+target_position = Vector2(37, 0)
+
+[node name="RayCastL" type="RayCast2D" parent="."]
+position = Vector2(0, 22)
+target_position = Vector2(-35, 0)

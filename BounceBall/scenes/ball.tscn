@@ -83,6 +83,7 @@ region = Rect2(1900, 0, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
+<<<<<<< Updated upstream
 "texture": SubResource("AtlasTexture_yoj0p")
 }],
 "loop": true,
@@ -92,6 +93,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uhadu")
+=======
+"texture": SubResource("AtlasTexture_jqff0")
+}, {
+"duration": 1.0,
+"texture": null
+>>>>>>> Stashed changes
 }],
 "loop": true,
 "name": &"dead",
@@ -170,8 +177,14 @@ radius = 23.0
 [node name="ball" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+<<<<<<< Updated upstream
 sprite_frames = SubResource("SpriteFrames_dej2w")
 animation = &"jump"
+=======
+sprite_frames = SubResource("SpriteFrames_rsgwh")
+animation = &"dead"
+autoplay = "wait"
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
