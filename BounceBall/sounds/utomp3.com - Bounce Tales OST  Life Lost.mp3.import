@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ni8egijrv62l"
+path="res://.godot/imported/utomp3.com - Bounce Tales OST  Life Lost.mp3-896ddc958ad44a6810c8b87ca494714b.mp3str"
+
+[deps]
+
+source_file="res://sounds/utomp3.com - Bounce Tales OST  Life Lost.mp3"
+dest_files=["res://.godot/imported/utomp3.com - Bounce Tales OST  Life Lost.mp3-896ddc958ad44a6810c8b87ca494714b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

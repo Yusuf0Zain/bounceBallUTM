@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blvpog1718f25"
+path="res://.godot/imported/utomp3.com - Bounce Tales OST  Level Complete.mp3-22bd8aba398b4af8b0e4b4d29813ade1.mp3str"
+
+[deps]
+
+source_file="res://sounds/utomp3.com - Bounce Tales OST  Level Complete.mp3"
+dest_files=["res://.godot/imported/utomp3.com - Bounce Tales OST  Level Complete.mp3-22bd8aba398b4af8b0e4b4d29813ade1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

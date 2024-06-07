@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjsktiltjbkt7"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_gjvdp"]
+[ext_resource type="FontFile" uid="uid://c5pn2paq2n0m8" path="res://assets/Retro Gaming.ttf" id="2_360ax"]
+[ext_resource type="AudioStream" uid="uid://bkswymq578mjw" path="res://sounds/blip-131856.wav" id="3_j4vog"]
+
+[sub_resource type="GDScript" id="GDScript_qtabs"]
+script/source = "extends Label
+
+# Speed of typing (characters per second)
+var typing_speed = 30.0
+
+var full_text = \"\"
+var current_index = 0
+var is_typing = false
+
+func _ready():
+	# Initialize the label text to be empty
+	text = \"\"
+
+func start_typing(new_text):
+	full_text = new_text
+	current_index = 0
+	is_typing = true
+	text = \"\"
+	_process_typing()
+
+func _process_typing():
+	if is_typing:
+		if current_index < full_text.length():
+			current_index += 1
+			text = full_text.substr(0, current_index)
+			await(get_tree().create_timer(1.0 / typing_speed))
+			_process_typing()
+		else:
+			is_typing = false
+"
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_gjvdp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 132)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1503.0
+offset_top = 195.0
+offset_right = 1497.0
+offset_bottom = 323.0
+grow_horizontal = 2
+scale = Vector2(0.146977, 0.146977)
+pivot_offset = Vector2(1503.32, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_360ax")
+theme_override_font_sizes/font_size = 100
+text = "...
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = SubResource("GDScript_qtabs")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j4vog")
