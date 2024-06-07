@@ -1,11 +1,11 @@
 extends Area2D
 
+const SPEED = 300
+var direction = 1
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $CollisionShape2D/RayCastLeft.is_colliding():
+		direction = 1
+	if $CollisionShape2D/RayCastRight.is_colliding():
+		direction = -1
+	position.x += direction * SPEED * delta
