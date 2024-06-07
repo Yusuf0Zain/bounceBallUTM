@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level1.tscn")
+	get_tree().change_scene_to_file("res://scenes/level1.tscn")
 	$AudioStreamPlayer.play()
 func _on_levels_pressed():
 	$AudioStreamPlayer.play()
@@ -14,7 +14,7 @@ func _on_back_pressed():
 
 
 func _on_one_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level1.tscn")
+	get_tree().change_scene_to_file("res://scenes/level1.tscn")
 	$AudioStreamPlayer.play()
 
 
