@@ -1,0 +1,166 @@
+[gd_scene load_steps=6 format=3 uid="uid://4d620vx40bwr"]
+
+[ext_resource type="Script" path="res://scripts/GameMan.gd" id="1_x316e"]
+[ext_resource type="FontFile" uid="uid://dgj1s5ouoodte" path="res://assets/Super Normal.ttf" id="2_gmeqq"]
+[ext_resource type="Texture2D" uid="uid://3q10loc67i3a" path="res://assets/sprites/backgroundMenu.png" id="2_q4owk"]
+[ext_resource type="Texture2D" uid="uid://dd1cnw2fvokx2" path="res://assets/sprites/lgoo.png" id="2_vxxqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o4mw"]
+bg_color = Color(0.87451, 0.87451, 0.87451, 1)
+corner_detail = 20
+
+[node name="GameMenu" type="Node2D"]
+script = ExtResource("1_x316e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.525, 0.525)
+
+[node name="BackgroundMenu" type="Sprite2D" parent="."]
+position = Vector2(-8, -8)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("2_q4owk")
+
+[node name="Lgoo" type="Sprite2D" parent="."]
+position = Vector2(0, -319)
+scale = Vector2(0.865, 0.865)
+texture = ExtResource("2_vxxqr")
+
+[node name="Menu" type="VBoxContainer" parent="Lgoo"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -756.185
+offset_top = 115.286
+offset_right = -325.185
+offset_bottom = 502.286
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5563, 1.5563)
+pivot_offset = Vector2(215.451, 0.0656185)
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="play" type="Button" parent="Lgoo/Menu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.466667, 0.0627451, 0.0627451, 1)
+theme_override_colors/font_focus_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 200
+action_mode = 0
+text = "PLAY"
+flat = true
+
+[node name="levels" type="Button" parent="Lgoo/Menu"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.360774, 0, 0.140881, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0352941, 0.0313726, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+text = "levels"
+flat = true
+
+[node name="back" type="Button" parent="Lgoo/Menu"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+text = "RETURN"
+flat = true
+
+[node name="Levels" type="VBoxContainer" parent="."]
+visible = false
+offset_left = -944.0
+offset_top = -352.0
+offset_right = -340.0
+offset_bottom = -1.0
+scale = Vector2(3.12, 3.12)
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Levels"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 65
+alignment = 1
+
+[node name="one" type="Button" parent="Levels/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2o4mw")
+text = "1
+"
+flat = true
+
+[node name="two" type="Button" parent="Levels/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2o4mw")
+text = "2
+"
+flat = true
+
+[node name="three" type="Button" parent="Levels/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2o4mw")
+text = "3
+"
+flat = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Levels"]
+layout_mode = 2
+theme_override_constants/separation = 180
+alignment = 1
+
+[node name="backMenu" type="Button" parent="Levels/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_pressed_color = Color(0.360784, 0, 0.141176, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.243137, 0.254902, 1)
+theme_override_colors/font_outline_color = Color(1, 0.0392157, 0.0352941, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_gmeqq")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2o4mw")
+text = "back"
+flat = true
+
+[connection signal="pressed" from="Lgoo/Menu/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Lgoo/Menu/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Lgoo/Menu/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer/one" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer/two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer/three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="Levels/HBoxContainer3/backMenu" to="." method="_on_back_menu_pressed"]
