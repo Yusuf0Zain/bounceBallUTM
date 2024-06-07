@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/levelManger.gd" id="1_rayd3"]
 [ext_resource type="TileSet" uid="uid://jd5qgxg0bqit" path="res://scenes/LevelTest.tres" id="2_mhst2"]
 [ext_resource type="PackedScene" uid="uid://csyhpxjklwgx3" path="res://scenes/dead.tscn" id="3_chels"]
-[ext_resource type="Script" path="res://scenes/coin.gd" id="4_n0n5y"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="4_n0n5y"]
 [ext_resource type="Texture2D" uid="uid://bvf1ktil3adxn" path="res://assets/sprites/coin.png" id="5_ue0aj"]
 [ext_resource type="Texture2D" uid="uid://dulu5m7tssbbi" path="res://assets/sprites/tree.png" id="6_78e5n"]
 [ext_resource type="Texture2D" uid="uid://cxpvfu6pw8o" path="res://assets/sprites/bounce.png" id="7_462c7"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://0ndmwuefe0mw" path="res://assets/sprites/spikes.png" id="12_k2wi3"]
 [ext_resource type="PackedScene" uid="uid://dup161cvvdgeh" path="res://key.tscn" id="13_an22c"]
 [ext_resource type="Texture2D" uid="uid://blc1d7ddjlln5" path="res://assets/sprites/lock.png" id="14_vewqm"]
-[ext_resource type="Script" path="res://scenes/enemy.gd" id="15_japni"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="15_japni"]
 [ext_resource type="Texture2D" uid="uid://1cvaq613yw6t" path="res://assets/sprites/spikeSpin.png" id="16_x2nhl"]
 
 [sub_resource type="Gradient" id="Gradient_i3rvl"]
