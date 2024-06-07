@@ -22,11 +22,6 @@ func _on_two_pressed():
 func _on_three_pressed():
 	get_tree().change_scene_to_file("res://scenes/Level3.tscn")
 
-func _on_boss_pressed():
-	get_tree().change_scene_to_file("res://scenes/BossLevel.tscn")
-
-func _on_secret_pressed():
-	get_tree().change_scene_to_file("res://scenes/Secret.tscn")
 
 
 func _on_back_menu_pressed():

@@ -42,7 +42,7 @@ func _physics_process(delta):
 		if is_on_floor() and velocity.x == 0:
 			idle_time += delta
 			if idle_time >= IDLE_THRESHOLD:
-				set_animation_state(AnimationState.WAIT)
+				animated_sprite.play("wait")
 			elif current_animation_state != AnimationState.WAIT:
 				set_animation_state(AnimationState.IDLE)
 
