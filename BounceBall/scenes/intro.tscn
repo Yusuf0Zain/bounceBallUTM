@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjsktiltjbkt7"]
+[gd_scene load_steps=5 format=3 uid="uid://cjsktiltjbkt7"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_gjvdp"]
 [ext_resource type="FontFile" uid="uid://c5pn2paq2n0m8" path="res://assets/Retro Gaming.ttf" id="2_360ax"]
+[ext_resource type="AudioStream" uid="uid://bkswymq578mjw" path="res://sounds/blip-131856.wav" id="3_j4vog"]
 
 [sub_resource type="GDScript" id="GDScript_qtabs"]
 script/source = "extends Label
@@ -65,3 +66,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 script = SubResource("GDScript_qtabs")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j4vog")

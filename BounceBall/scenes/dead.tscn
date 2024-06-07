@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://csyhpxjklwgx3"]
+[gd_scene load_steps=3 format=3 uid="uid://csyhpxjklwgx3"]
 
 [ext_resource type="Script" path="res://scripts/dead.gd" id="1_b5dds"]
+[ext_resource type="AudioStream" uid="uid://ct2nkhdas7igc" path="res://sounds/utomp3.com - Bounce Tales OST  Life Lost.wav" id="2_83q54"]
 
 [node name="dead" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_b5dds")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="deadTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[node name="lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_83q54")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="deadTimer" to="." method="_on_timer_timeout"]

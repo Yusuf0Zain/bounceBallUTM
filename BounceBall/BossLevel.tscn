@@ -974,6 +974,7 @@ position = Vector2(0, 2)
 scale = Vector2(2.32, 2.32)
 shape = SubResource("CircleShape2D_1m58n")
 
+[connection signal="body_entered" from="dead" to="." method="_on_dead_body_entered"]
 [connection signal="body_entered" from="coins/coin" to="coins/coin" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coin2" to="coins/coin2" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coin3" to="coins/coin3" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://v0h0r6m7fqvi"]
+[gd_scene load_steps=8 format=3 uid="uid://v0h0r6m7fqvi"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_2lh14"]
 [ext_resource type="VideoStream" path="res://video/Timeline 2.ogv" id="1_atq8o"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvj8yx5oo1qn0" path="res://assets/nokia/c03028b12f6cd0b9553b7df8a92420db.jpg" id="3_61exf"]
 [ext_resource type="Texture2D" uid="uid://g0d1iydxi6u2" path="res://assets/nokia/0001.png" id="5_u3aml"]
 [ext_resource type="Texture2D" uid="uid://ckdfq27aurc38" path="res://assets/nokia/pngwing.com (1) (1).png" id="6_1xcwn"]
+[ext_resource type="AudioStream" uid="uid://bkswymq578mjw" path="res://sounds/blip-131856.wav" id="7_osmam"]
 
 [node name="NokiaMain" type="Node2D"]
 script = ExtResource("1_2lh14")
@@ -69,6 +70,9 @@ pivot_offset = Vector2(328, 336)
 size_flags_horizontal = 0
 stream = ExtResource("1_atq8o")
 autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_osmam")
 
 [connection signal="pressed" from="menu/game" to="." method="_on_game_pressed"]
 [connection signal="pressed" from="menu/power" to="." method="_on_power_pressed"]

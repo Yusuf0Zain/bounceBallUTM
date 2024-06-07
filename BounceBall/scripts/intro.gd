@@ -28,6 +28,7 @@ func show_step(step_index):
 	
 func _input(event):
 	if event.is_action_pressed("ui_accept"):  
+		$AudioStreamPlayer.play()
 		current_step += 1
 		if current_step < steps.size():
 			show_step(current_step)
