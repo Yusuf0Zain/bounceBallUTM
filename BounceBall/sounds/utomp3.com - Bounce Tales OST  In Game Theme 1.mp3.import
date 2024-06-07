@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwsdkamm0onqh"
+path="res://.godot/imported/utomp3.com - Bounce Tales OST  In Game Theme 1.mp3-47cb196c451e6901e9ce02d7ef0e1e3b.mp3str"
+
+[deps]
+
+source_file="res://sounds/utomp3.com - Bounce Tales OST  In Game Theme 1.mp3"
+dest_files=["res://.godot/imported/utomp3.com - Bounce Tales OST  In Game Theme 1.mp3-47cb196c451e6901e9ce02d7ef0e1e3b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

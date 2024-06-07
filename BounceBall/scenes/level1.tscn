@@ -1,8 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://csyokwejlqhxv"]
+[gd_scene load_steps=47 format=3 uid="uid://csyokwejlqhxv"]
 
 [ext_resource type="Script" path="res://scripts/levelManger.gd" id="1_rayd3"]
 [ext_resource type="TileSet" uid="uid://jd5qgxg0bqit" path="res://scenes/LevelTest.tres" id="2_mhst2"]
+[ext_resource type="AudioStream" uid="uid://bmvmv45fn7vb8" path="res://sounds/utomp3.com - Bounce Tales OST  Level Complete.wav" id="2_oit7t"]
 [ext_resource type="PackedScene" uid="uid://csyhpxjklwgx3" path="res://scenes/dead.tscn" id="3_chels"]
+[ext_resource type="AudioStream" uid="uid://ct2nkhdas7igc" path="res://sounds/utomp3.com - Bounce Tales OST  Life Lost.wav" id="3_jof2y"]
 [ext_resource type="Script" path="res://scripts/coin.gd" id="4_n0n5y"]
 [ext_resource type="Texture2D" uid="uid://bvf1ktil3adxn" path="res://assets/sprites/coin.png" id="5_ue0aj"]
 [ext_resource type="Texture2D" uid="uid://dulu5m7tssbbi" path="res://assets/sprites/tree.png" id="6_78e5n"]
@@ -16,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://blc1d7ddjlln5" path="res://assets/sprites/lock.png" id="14_vewqm"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="15_japni"]
 [ext_resource type="Texture2D" uid="uid://1cvaq613yw6t" path="res://assets/sprites/spikeSpin.png" id="16_x2nhl"]
+[ext_resource type="AudioStream" uid="uid://bwsdkamm0onqh" path="res://sounds/utomp3.com - Bounce Tales OST  In Game Theme 1.mp3" id="17_y4br0"]
 
 [sub_resource type="Gradient" id="Gradient_i3rvl"]
 offsets = PackedFloat32Array(0, 0.337349, 0.686747, 1)
@@ -185,6 +188,16 @@ animations = [{
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_rayd3")
+
+[node name="background2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_y4br0")
+autoplay = true
+
+[node name="win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_oit7t")
+
+[node name="lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jof2y")
 
 [node name="sky" type="Sprite2D" parent="."]
 position = Vector2(2675, -49)
@@ -396,7 +409,7 @@ scale = Vector2(1.76753, 2.38255)
 shape = SubResource("CircleShape2D_1dblk")
 
 [node name="ball" parent="." instance=ExtResource("8_6wxmk")]
-position = Vector2(5816, 294)
+position = Vector2(5175, 122)
 collision_layer = 3
 script = ExtResource("9_xes8i")
 
@@ -553,6 +566,8 @@ target_position = Vector2(-11, 0)
 
 [node name="Node2D" type="Node2D" parent="enemy"]
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="coins/coin" to="." method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coins/coin" to="coins/coin" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coin2" to="." method="_on_coin_body_entered"]
@@ -577,3 +592,4 @@ target_position = Vector2(-11, 0)
 [connection signal="body_entered" from="bounce" to="." method="_on_bounce_body_entered"]
 [connection signal="body_entered" from="Key,Lock/key" to="." method="_on_key_body_entered"]
 [connection signal="body_entered" from="Key,Lock/key" to="ball" method="_on_key_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

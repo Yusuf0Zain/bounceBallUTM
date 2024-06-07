@@ -17,7 +17,8 @@ func _on_bounce_body_entered(body):
 func _on_tree_body_entered(body):
 	$ball/AnimatedSprite2D.play("win")
 	$Timer.start(4)
-
+	$win.playing
+	$background2.stop()
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://Level2.tscn")
